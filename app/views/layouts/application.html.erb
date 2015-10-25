@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portal</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script>
+	  var ready = function() {
+		  <%= yield :link_new_table %>
+	  };
+	  $(document).ready(ready)
+	  $(document).on('page:load', ready)
+  </script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <%= image_tag('Portal.png', size: "40x40", :class => 'pull-left my-portal')%>
+        <a class="btn btn-navbar portal-margin" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand portal-margin" href="/">Portal</a>
+        <div class="nav-collapse">
+          <ul class="nav portal-margin">
+            <% if current_user && current_user.admin %>
+              <li><%= link_to "User Emails", addresses_path %></li>
+						<% end %>
+            <% if user_signed_in? %>
+  						<li class=button-padding>Signed in as: <%= current_user.email %><%= " - Admin" if current_user.admin %></li>
+            <% end %>
+          </ul>
+					<ul class="nav navbar-nav pull-right">
+						<% if user_signed_in? %>
+							<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-primary portal-margin' %>
+						<% else %>
+							<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), :class => 'btn btn-primary portal-margin' %>
+						<% end %>
+					</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% unless flash[:notice].blank? %>
+	<div class="alert alert-info">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<% unless flash[:alert].blank? %>
+	<div class="alert alert-danger">
+		<%= flash[:alert] %>
+	</div>
+<% end %>
+
+<% if user_signed_in? %>
+	<!-- Before yield -->
+	<%= yield %>
+	<!-- After yield -->
+<% else %>
+<%= link_to(image_tag("Portal.png", :size => "500x500", :class => 'my-center'), user_omniauth_authorize_path(:google_oauth2)) %>
+<% end %>
+
+</body>
+</html>

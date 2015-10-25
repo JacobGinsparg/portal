@@ -1,0 +1,19 @@
+== README
+
+TO AUTHORIZE GOOGLE OAUTH2:
+
+Head https://console.developers.google.com/project
+
+Click on project (make new one if there are none yet), head to Credentials under APIs & Auths
+
+Select 'Create new client ID'
+
+For development, set the authorized redirect URI to http://localhost:3000/users/auth/google_oauth2/callback
+
+Then grab the client ID and client secret and replace the test ones in your application.yaml (from Figaro)
+
+Head to the APIs tab under APIs & Auths
+
+Enable Contacts API and Google+ API
+
+Good to go

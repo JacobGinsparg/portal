@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.floatleft {
+	float: left;
+}
+
+body {
+	padding: 70px 10px 0px 10px;
+}
+
+.portal-margin {
+  margin-top: 10px !important;
+}
+
+.button-padding {
+	padding: 10px 10px;
+	color: #777777;
+}
+
+.my-width {
+  width: 72px !important;
+}
+
+.centered {
+  text-align: center !important;
+}
+
+.my-portal {
+  padding: 5px 20px 5px 0px;
+}
+
+.my-center {
+  display: block;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bootstrap Button Overrides */
+/*################## btn-primary ##################*/
+
+.btn-primary { 
+  color: #FFF !important; 
+  background-color: #F37621 !important; 
+  border-color: #F37621 !important; 
+  background-image: none !important;
+} 
+ 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  color: #FFF !important; 
+  background-color: #F39000 !important; 
+  border-color: #F37621 !important; 
+} 
+ 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  background-image: none !important; 
+} 
+ 
+.btn-primary.disabled, 
+.btn-primary[disabled], 
+fieldset[disabled] .btn-primary, 
+.btn-primary.disabled:hover, 
+.btn-primary[disabled]:hover, 
+fieldset[disabled] .btn-primary:hover, 
+.btn-primary.disabled:focus, 
+.btn-primary[disabled]:focus, 
+fieldset[disabled] .btn-primary:focus, 
+.btn-primary.disabled:active, 
+.btn-primary[disabled]:active, 
+fieldset[disabled] .btn-primary:active, 
+.btn-primary.disabled.active, 
+.btn-primary[disabled].active, 
+fieldset[disabled] .btn-primary.active { 
+  background-color: #F37621 !important; 
+  border-color: #F37621 !important; 
+} 
+ 
+.btn-primary .badge { 
+  color: #F37621 !important; 
+  background-color: #000000 !important; 
+}
+
+/*################## btn-danger ##################*/
+
+.btn-danger {
+  color: #FFF !important;
+  background-color: #E74C3C !important;
+  border-color: #E74C3C !important;
+  background-image: none !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  color: #FFF !important;
+  background-color: #CF4536 !important;
+  border-color: #E74C3C !important;
+}
+
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  background-image: none !important;
+}
+
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #E74C3C !important;
+  border-color: #E74C3C !important;
+}
+
+.btn-danger .badge {
+  color: #E74C3C !important;
+  background-color: #FFF !important;
+}
+
+/*################## btn-delete ##################*/
+
+.btn-default { 
+  color: #000000 !important; 
+  background-color: #E4E3E3 !important; 
+  border-color: #b3b3b2 !important; 
+  background-image: none !important;
+} 
+ 
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default.active, 
+.open .dropdown-toggle.btn-default { 
+  color: #000000 !important; 
+  background-color: #d2d0d0 !important; 
+  border-color: #b3b3b2 !important; 
+} 
+ 
+.btn-default:active, 
+.btn-default.active, 
+.open .dropdown-toggle.btn-default { 
+  background-image: none !important; 
+} 
+ 
+.btn-default.disabled, 
+.btn-default[disabled], 
+fieldset[disabled] .btn-default, 
+.btn-default.disabled:hover, 
+.btn-default[disabled]:hover, 
+fieldset[disabled] .btn-default:hover, 
+.btn-default.disabled:focus, 
+.btn-default[disabled]:focus, 
+fieldset[disabled] .btn-default:focus, 
+.btn-default.disabled:active, 
+.btn-default[disabled]:active, 
+fieldset[disabled] .btn-default:active, 
+.btn-default.disabled.active, 
+.btn-default[disabled].active, 
+fieldset[disabled] .btn-default.active { 
+  background-color: #E4E3E3 !important; 
+  border-color: #b3b3b2 !important; 
+} 
+ 
+.btn-default .badge { 
+  color: #E4E3E3 !important; 
+  background-color: #000000 !important; 
+}
